@@ -1,91 +1,139 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TecBlog - O seu Blog de tecnologia</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>TecBlog - O seu Blog de tecnologia</title>
+
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-	<div id="area-cabecalho">
-		
+	<!-- CABEÇALHO ORIGINAL (mantido) -->
+	<div id="area-cabecalho" class="text-center">
+
 		<div id="area-logo">
 			<h1>Tec<span class="branco">Blog</span></h1>
 		</div>
-		<div id="area-menu">
+
+		<div id="area-menu" class="d-flex justify-content-center flex-wrap gap-3">
 			<a href="index.html">Home</a>
-			<a href="jogos.html">Jogos</a>
-			<a href="celulares.html">Celulares</a>
-			<a href="informatica.html">Informática</a>
-			<a href="eletronicos.html">Eletrônicos</a>
+			<a href="#">Jogos</a>
+			<a href="#">Celulares</a>
+			<a href="#">Informática</a>
+			<a href="#">Eletrônicos</a>
+			<a href="login.html">Login</a>
+			<a href="cadastro.html">Cadastro</a>
 		</div>
 
 	</div>
 
-	<div id="area-principal">
+	<!-- CARROSSEL -->
+	<div id="carouselExample" class="carousel slide carousel-fade"
+		data-bs-ride="carousel"
+		data-bs-interval="3000"
+		data-bs-wrap="true"
+		data-bs-pause="false">
 
-		<div id="area-postagens">
-			
-			<!-- abertura postagem -->
-			<div class="postagem">
-				<h2>Titulo da postagem 1</h2>
-				<span class="data-postagem">postado 20 março 2022</span>
-				<img width="620px" src="imagens/imagem1.jpg">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et scelerisque quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent nulla turpis, gravida at nunc eu, luctus aliquam justo. Praesent eget risus vehicula
-				</p>
-				<a href="">Leia mais</a>
-			</div><!--// fechamento postagem -->
+		<div class="carousel-inner">
 
-			<!-- abertura postagem -->
-			<div class="postagem">
-				<h2>Titulo da postagem 2</h2>
-				<span class="data-postagem">postado 10 março 2022</span>
-				<img width="620px" src="imagens/imagem2.jpg">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et scelerisque quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent nulla turpis, gravida at nunc eu, luctus aliquam justo. Praesent eget risus vehicula
-				</p>
-				<a href="">Leia mais</a>
-			</div><!--// fechamento postagem -->
+			<div class="carousel-item active">
+				<img src="imagens/imagem1.jpg" class="d-block w-100">
+			</div>
+
+			<div class="carousel-item">
+				<img src="imagens/imagem2.jpg" class="d-block w-100">
+			</div>
+
+			<div class="carousel-item">
+				<img src="imagens/imagem3.jpg" class="d-block w-100">
+			</div>
 
 		</div>
-		<div id="area-lateral">
-			
 
-			<div class="conteudo-lateral">
-				<h3>Postagens recentes</h3>
-				
-				<div class="postagem-lateral">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<button class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</button>
+
+		<button class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</button>
+
+	</div>
+
+	<!-- ÁREA PRINCIPAL -->
+	<div id="area-principal" class="container mt-4">
+
+		<div class="row">
+
+			<!-- POSTAGENS -->
+			<div id="area-postagens" class="col-12 col-lg-8">
+
+				<div class="postagem">
+					<h2>Titulo da postagem 1</h2>
+					<span class="data-postagem">postado 20 março 2022</span>
+					<img class="img-fluid" src="imagens/imagem1.jpg">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					</p>
 					<a href="">Leia mais</a>
 				</div>
 
-				<div class="postagem-lateral" style="border-bottom: none;">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<div class="postagem">
+					<h2>Titulo da postagem 2</h2>
+					<span class="data-postagem">postado 10 março 2022</span>
+					<img class="img-fluid" src="imagens/imagem2.jpg">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					</p>
 					<a href="">Leia mais</a>
 				</div>
 
 			</div>
 
-			<div class="conteudo-lateral">
-				<h3>Categorias</h3>
-				
-				<a href="">Jogos</a><br>
-				<a href="">Celulares</a><br>
-				<a href="">Informática</a><br>
-				<a href="">Eletrônicos</a><br>
-				<a href="">Jogos</a><br>
+			<!-- LATERAL -->
+			<div id="area-lateral" class="col-12 col-lg-4">
+
+				<div class="conteudo-lateral">
+					<h3>Postagens recentes</h3>
+
+					<div class="postagem-lateral">
+						<p>Lorem ipsum dolor sit amet</p>
+						<a href="">Leia mais</a>
+					</div>
+
+					<div class="postagem-lateral" style="border-bottom: none;">
+						<p>Lorem ipsum dolor sit amet</p>
+						<a href="">Leia mais</a>
+					</div>
+				</div>
+
+				<div class="conteudo-lateral">
+					<h3>Categorias</h3>
+
+					<a href="">Jogos</a><br>
+					<a href="">Celulares</a><br>
+					<a href="">Informática</a><br>
+					<a href="">Eletrônicos</a><br>
+				</div>
 
 			</div>
 
-
 		</div>
 
-		<div id="rodape">
+		<div id="rodape" class="text-center mt-4">
 			Todos os direitos reservados
 		</div>
 
 	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
